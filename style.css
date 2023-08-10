@@ -227,7 +227,7 @@
 
 }
 
-@media (min-width: 50em) {
+@media (min-width: 45em) {
     .main-container-1 {
     /* Tablet Layout */
     grid-template:
@@ -263,7 +263,7 @@
     }
 }
 
-@media (min-width: 75em) {
+@media (min-width: 65em) {
     .main-container-1 {
     /* Desktop Layout */
     grid-template:
