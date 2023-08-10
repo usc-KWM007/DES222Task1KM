@@ -1,0 +1,218 @@
+/* Color pallete */
+:root {
+    --white-font: #FFFFFF;
+    --black-font: #000000;
+    --color1: #81667A;
+    --color2: #8C8A93;
+    --color3: #92B4A7;
+    --color4: #B6CB9E;
+    --color5: #D1F0B1;
+}
+
+.main-container-1 {
+    max-width: 72em;
+    margin: 0 auto;
+    font-family: Inter;
+    color: var(--white-font)
+}
+
+.banner {
+    background-color: var(--color1);
+    padding: 1em;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.banner-title {
+    font-size: 4em;
+}
+
+.banner-subtitle {
+    font-size: 3em;
+}
+
+.double-picture-section {
+    background-color: var(--color2);
+    display:flex;
+    flex-direction: column;
+    border-radius: 1em;
+    overflow: hidden;
+ 
+}
+
+.single-picture-section {
+    background-color: var(--color4);
+    display:flex;
+    flex-direction: column;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.section-picture {
+    width: 100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.section-picture1 {
+    min-height: 20em;
+    max-height: 20em;
+    object-fit:cover;
+}
+
+.section-picture2 {
+    min-height: 20em;
+    max-height: 20em;
+    object-fit:cover;
+}
+
+.double-picture-section-images {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch
+}
+
+
+.section-blurb {
+    padding: 0.5em;
+    font-size: 2.25em;
+    text-align: center;
+
+}
+
+.section-title {
+    background-color: var(--color3);
+    text-align: center;
+    padding-top: 0.4em;
+    border-radius: 0.5em;
+}
+
+.section-title-top{
+    text-decoration: underline;
+    font-size: 3em;
+}
+
+.section-title-bottom{
+    font-size: 2.25em;
+}
+
+
+/*grid area names */
+#banner {
+    grid-area: ban;
+}
+
+#section1 {
+    grid-area: sc1;
+}
+
+#section2 {
+    grid-area: sc2;
+}
+
+#section3 {
+    grid-area: sc3;
+}
+
+#section4 {
+    grid-area: sc4;
+}
+
+#section5 {
+    grid-area: sc5;
+}
+
+#section6 {
+    grid-area: sc6;
+}
+
+#section1title {
+    grid-area: sc1t;
+}
+
+#section4title {
+    grid-area: sc4t;
+}
+
+#section6title {
+    grid-area: sc6t;
+}
+
+
+.main-container-1 {
+    display: grid;
+    column-gap: 1em;
+   grid-auto-columns: 1fr;
+}
+
+
+/* Responsive Layout breakpoints*/
+.main-container-1 {
+    /* Phone Layout */
+    grid-template:
+    "ban ban ban ban" minmax(12em, auto)
+    ".   .   .   .  "minmax(4em, auto)
+    "sc1t sc1t sc1t sc1t" minmax(8em, auto)
+    ".   .   .   .  "minmax(2em, auto)
+    "sc1 sc1 sc1 sc1" minmax(32em, auto)
+    ".   .   .   .  "minmax(2em, auto)
+    "sc2 sc2 sc2 sc2" minmax(32em, auto)
+    ".   .   .   .  "minmax(2em, auto)
+    "sc3 sc3 sc3 sc3" minmax(32em, auto)
+    ".   .   .   .  "minmax(2em, auto)
+    "sc4t sc4t sc4t sc4t" minmax(8em, auto)
+    ".   .   .   .  "minmax(2em, auto)
+    "sc4 sc4 sc4 sc4" minmax(32em, auto)
+    ".   .   .   .  "minmax(2em, auto)
+    "sc5 sc5 sc5 sc5" minmax(32em, auto)
+    ".   .   .   .  "minmax(2em, auto)
+    "sc6t sc6t sc6t sc6t" minmax(8em, auto)
+    ".   .   .   .  "minmax(2em, auto)
+    "sc6 sc6 sc6 sc6" minmax(32em, auto)
+
+}
+
+@media (min-width: 50em) {
+    .main-container-1 {
+    /* Tablet Layout */
+    grid-template:
+    "ban ban ban ban ban ban ban ban" minmax(12em, auto)
+    ".   .   .   .   .   .   .   .  " minmax(4em, auto)
+    "sc1t sc1t sc1t sc1t .   .   .   .  " minmax(4em, 4em)
+    "sc1t sc1t sc1t sc1t  sc2  sc2 sc2 sc2  " minmax(4em, 4em)
+    ". . . .  sc2  sc2 sc2 sc2  " minmax(4em, 4em)
+    "sc1 sc1 sc1 sc1  sc2  sc2 sc2 sc2  " minmax(28em, 28em)
+    "sc1 sc1 sc1 sc1  .  . . .  " minmax(4em, 4em)
+    "sc1 sc1 sc1 sc1  sc3  sc3 sc3 sc3  " minmax(16em, 16em)
+    ". . . .  sc3  sc3 sc3 sc3  " minmax(4em, 4em)
+    "sc4t sc4t sc4t sc4t  sc3  sc3 sc3 sc3  " minmax(8em, 8em)
+    ". . . .  sc3  sc3 sc3 sc3  " minmax(4em, 4em)
+    "sc4 sc4 sc4 sc4  sc3  sc3 sc3 sc3  " minmax(16em, 16em)
+    "sc4 sc4 sc4 sc4  .  . . .  " minmax(4em, 4em)
+    "sc4 sc4 sc4 sc4  sc5  sc5 sc5 sc5  " minmax(16em, 16em)
+    ". . . .  sc5  sc5 sc5 sc5  " minmax(4em, 4em)
+    "sc6t sc6t sc6t sc6t  sc5  sc5 sc5 sc5  " minmax(8em, 8em)
+    ". . . .  sc5  sc5 sc5 sc5  " minmax(4em, 4em)
+    "sc6 sc6 sc6 sc6  sc5  sc5 sc5 sc5  " minmax(16em, 16em)
+    "sc6 sc6 sc6 sc6  .  . . .  " minmax(28em, 28em)
+    }
+}
+
+@media (min-width: 75em) {
+    .main-container-1 {
+    /* Desktop Layout */
+    grid-template:
+    "ban ban ban ban ban ban ban ban ban ban ban ban" minmax(12em, auto)
+    " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
+    "sc1 sc1 sc1 sc1 sc1t sc1t sc1t sc1t sc3 sc3 sc3 sc3" minmax(8em, 8em)
+    "sc1 sc1 sc1 sc1   .   .    .    . sc3 sc3 sc3 sc3" minmax(4em, 4em)
+    "sc1 sc1 sc1 sc1 sc2 sc2 sc2 sc2 sc3 sc3 sc3 sc3" minmax(36em, auto)
+    " .   .   .   .   .   .   .   .   .   .   .   . " minmax(8em, auto)
+    "sc4t sc4t sc4t sc4t sc5 sc5 sc5 sc5 sc6t sc6t sc6t sc6t" minmax(8em, 8em)
+    ".    .    .    .    sc5 sc5 sc5 sc5  .   .    .    ." minmax(4em, 4em)
+    "sc4 sc4 sc4 sc4 sc5 sc5 sc5 sc5 sc6 sc6 sc6 sc6" minmax(36em, 36em)
+    }
+}
