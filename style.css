@@ -265,7 +265,7 @@
     }
 }
 
-@media (min-width: 75em) {
+@media (min-width: 70em) {
     .main-container-1 {
     /* Desktop Layout */
     grid-template:
